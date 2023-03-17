@@ -1,5 +1,5 @@
 import pickles
-import scikit-learn
+import sklearn
 import numpy as np
 
 filename = 'model.pickle'
