@@ -9,7 +9,7 @@ model = pickle.load(open(filename, "rb"))
 import streamlit as st
 
 st.title('aaa')
-a = st.number_input('Tham số a')
-a_pred = model.predict(a)
+temp = np.array(st.number_input('Temp:'))
+temp_pred = model.predict(temp)
 if st.button('Giải'):
-  st.success(a_pred)
+  st.success(temp_pred)
