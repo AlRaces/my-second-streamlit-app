@@ -1,4 +1,5 @@
-import pickle
+pickles
+scikit-learn
 
 filename = 'model.pickle'
 
