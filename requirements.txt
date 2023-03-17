@@ -1,28 +1,6 @@
+import pickle
 
+filename = 'model.pickle'
 
-pickles
-scikit-learn
-
-from google.colab import drive
-drive.mount('/content/drive')
-
-import pandas as pd
-import numpy as np
-df = pd.read_csv('/content/drive/MyDrive/IceCreamData.csv')
-df.head()
-x = df['Temperature'].values
-y = df['Revenue'].values
-
-from sklearn.linear_model import LinearRegression
-model = LinearRegression()
-
-x = x.reshape(-1, 1)
-model.fit(x, y)
-
-import streamlit as st
-
-st.title('Revenue Prediction')
-a = st.number_input('Input Temperature')
-a_pred = model.predict(a)
-if st.button('Predict'):
-  st.success(a_pred)
+pickle.dump(model, open(filename, "wb"))
+model = pickle.load(open(filename, "rb"))
