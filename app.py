@@ -1,5 +1,6 @@
-pickles
-scikit-learn
+import pickles
+import scikit-learn
+import numpy as np
 
 filename = 'model.pickle'
 
