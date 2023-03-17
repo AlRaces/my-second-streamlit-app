@@ -8,8 +8,9 @@ model = pickle.load(open(filename, "rb"))
 
 import streamlit as st
 
-st.title('aaa')
-temp = np.array(st.number_input('Temp:'))
+st.title('Revenue Prediction')
+temp = np.array(st.number_input('Input temperature:'))
 temp_pred = model.predict(temp.reshape(-1, 1))
+st.text('Revenue Prediction')
 if st.button('Giải'):
-  st.success(temp_pred)
+  st.success(*temp_pred)
