@@ -12,5 +12,5 @@ st.title('Revenue Prediction')
 temp = np.array(st.number_input('Input temperature:'))
 temp_pred = model.predict(temp.reshape(-1, 1))
 st.text('Revenue Prediction')
-if st.button('Giải'):
+if st.button('Predict'):
   st.success(*temp_pred)
